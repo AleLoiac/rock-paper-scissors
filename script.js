@@ -13,6 +13,6 @@ const getComputerChoice = () => {
 }
 
 const getHumanChoice = () => {
-    const humanChoice = prompt("Choose one between: Rock, Paper, Scissors");
+    const humanChoice = prompt("Choose one between: Rock, Paper, Scissors").toLowerCase();
     return humanChoice;
 }
