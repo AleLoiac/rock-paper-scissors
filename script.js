@@ -1,3 +1,6 @@
+const humanScore = 0;
+const computerScore = 0;
+
 const getComputerChoice = () => {
     const randomNumber = Math.floor(Math.random() * 3) + 1;
     if (randomNumber === 1) {
