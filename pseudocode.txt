@@ -26,3 +26,6 @@ Create function playRound with parameters humanChoice and computerChoice
     Else
         Increment computerScore by 1
         Log "You lose! computerChoice beats humanChoice", use string literal
+
+Save getComputerChoice and getHumanChoice outputs in two variables
+Pass those variables in playRound
