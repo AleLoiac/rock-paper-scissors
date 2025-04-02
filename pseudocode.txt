@@ -1,0 +1,16 @@
+Create variable humanScore and initialize it to 0
+Create variable computerScore and initialize it to 0
+Create a function getComputerChoice
+    Create a variable for randomNumber
+    Store a random number between 1 and 3 in randomNumber
+    If randomNumber is 1
+        Return "rock"
+    Else if randomNumber is 2
+        Return "paper"
+    Else
+         Return "scissors"
+
+Create a function getHumanChoice
+    Create a variable humanChoice
+    Ask the user for an input between "rock","paper","scissors" use prompt and store it in humanChoice
+    Return humanChoice
