@@ -35,7 +35,7 @@ const playGame = () => {
     for (let i = 0; i < 5; i++) {
         const computerSelection = getComputerChoice();
         const humanSelection = getHumanChoice();
-        playRound(humanSelection, computerSelection);
+        playRound(computerSelection, humanSelection);
     }
 
     if (humanScore === computerScore) {
