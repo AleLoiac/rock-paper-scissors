@@ -28,4 +28,4 @@ Create function playRound with parameters humanChoice and computerChoice
         Log "You lose! computerChoice beats humanChoice", use string literal
 
 Save getComputerChoice and getHumanChoice outputs in two variables
-Pass those variables in playRound
+Pass those variables in playRound and call it
