@@ -17,15 +17,19 @@ Create a function getHumanChoice
     Modify humanChoice so it's case insensitive
     Return humanChoice
 
-Create function playRound with parameters humanChoice and computerChoice
-    If humanChoice is identical to computerChoice
-        Return "It's a tie!"
-    If humanChoice is "rock" and computerChoice is "scissors" or humanChoice is "paper" and computerChoice is "rock" or humanChoice is "scissors" and computerChoice is "paper"
-        Increment humanScore by 1
-        Log "You win! humanChoice beats computerChoice", use string literal
+Create function playGame
+    Create function playRound with parameters humanChoice and computerChoice
+        If humanChoice is identical to computerChoice
+            Return "It's a tie!"
+        If humanChoice is "rock" and computerChoice is "scissors" or humanChoice is "paper" and computerChoice is "rock" or humanChoice is "scissors" and computerChoice is "paper"
+            Increment humanScore by 1
+            Log "You win! humanChoice beats computerChoice", use string literal
+        Else
+            Increment computerScore by 1
+            Log "You lose! computerChoice beats humanChoice", use string literal
+    Loop from 0 to 4
+        Call playRound
+    If humanScore is bigger than computerScore
+        Log you win
     Else
-        Increment computerScore by 1
-        Log "You lose! computerChoice beats humanChoice", use string literal
-
-Save getComputerChoice and getHumanChoice outputs in two variables
-Pass those variables in playRound and call it
+        Log computer wins
