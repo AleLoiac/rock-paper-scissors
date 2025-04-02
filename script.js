@@ -8,3 +8,8 @@ const getComputerChoice = () => {
         return "scissors";
     }
 }
+
+const getHumanChoice = () => {
+    const humanChoice = prompt("Choose one between: Rock, Paper, Scissors");
+    return humanChoice;
+}
