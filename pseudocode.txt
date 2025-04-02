@@ -17,8 +17,7 @@ Create a function getHumanChoice
     Modify humanChoice so it's case insensitive
     Return humanChoice
 
-Create function playGame
-    Create function playRound with parameters humanChoice and computerChoice
+Create function playRound with parameters humanChoice and computerChoice
         If humanChoice is identical to computerChoice
             Return "It's a tie!"
         If humanChoice is "rock" and computerChoice is "scissors" or humanChoice is "paper" and computerChoice is "rock" or humanChoice is "scissors" and computerChoice is "paper"
@@ -27,9 +26,13 @@ Create function playGame
         Else
             Increment computerScore by 1
             Log "You lose! computerChoice beats humanChoice", use string literal
+
+Create function playGame
     Loop from 0 to 4
         Call playRound
-    If humanScore is bigger than computerScore
+    If humanScore and computerScore are equal
+        Log it's a tie
+    Else if humanScore is bigger than computerScore
         Log you win
     Else
         Log computer wins
