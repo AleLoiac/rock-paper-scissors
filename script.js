@@ -36,18 +36,33 @@ const playRound = (computerChoice, humanChoice) => {
     }
 }
 
-container.addEventListener("click", (e) => {
-    const target = e.target;
+const reset = () => {
+    humanScore = 0;
+    computerScore = 0;
+    humanScoreDiv.textContent = `You: ${humanScore}`;
+    computerScoreDiv.textContent = `Computer: ${computerScore}`;
+}
 
-    switch (target.id) {
-        case "rock":
-            playRound(getComputerChoice(), "rock");
-            break;
-        case "paper":
-            playRound(getComputerChoice(), "paper");
-            break;
-        case "scissors":
-            playRound(getComputerChoice(), "scissors");
-            break;
-    }
+container.addEventListener("click", (e) => {
+const target = e.target;
+    
+switch (target.id) {
+    case "rock":
+        playRound(getComputerChoice(), "rock");
+        break;
+    case "paper":
+        playRound(getComputerChoice(), "paper");
+        break;
+    case "scissors":
+        playRound(getComputerChoice(), "scissors");
+        break;
+}
+
+if (humanScore === 5) {
+    result.textContent = `You won the game! You scored ${humanScore} points`;
+    reset();
+} else if (computerScore === 5) {
+    result.textContent = `Computer won the game! It scored ${computerScore} points`;
+    reset();
+}
 })
