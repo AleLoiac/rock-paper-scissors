@@ -1,0 +1,28 @@
+body {
+    font-size: 24px;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+}
+
+.human-score, .computer-score {
+    margin: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    margin: 10px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.result {
+    text-align: center;
+    margin: 10px;
+}
