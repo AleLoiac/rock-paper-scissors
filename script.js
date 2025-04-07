@@ -31,20 +31,20 @@ const playRound = (computerChoice, humanChoice) => {
     }
 }
 
-const playGame = () => {
-    for (let i = 0; i < 5; i++) {
-        const computerSelection = getComputerChoice();
-        const humanSelection = getHumanChoice();
-        playRound(computerSelection, humanSelection);
-    }
+const container = document.querySelector(".container");
 
-    if (humanScore === computerScore) {
-        console.log(`It's a tied! You both scored ${humanScore} points`);
-    } else if (humanScore > computerScore) {
-        console.log(`You won the game! You scored ${humanScore} points`);
-    } else {
-        console.log(`Computer won the game! It scored ${computerScore} points`);
-    }
-}
+container.addEventListener("click", (e) => {
+    const target = e.target;
 
-playGame();
+    switch (target.id) {
+        case "rock":
+            playRound(getComputerChoice(), "rock");
+            break;
+        case "paper":
+            playRound(getComputerChoice(), "paper");
+            break;
+        case "scissors":
+            playRound(getComputerChoice(), "scissors");
+            break;
+    }
+})
