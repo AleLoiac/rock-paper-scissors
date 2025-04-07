@@ -20,11 +20,6 @@ const getComputerChoice = () => {
     }
 }
 
-const getHumanChoice = () => {
-    const humanChoice = prompt("Choose one between: Rock, Paper, Scissors").toLowerCase();
-    return humanChoice;
-}
-
 const playRound = (computerChoice, humanChoice) => {
     if (humanChoice === computerChoice) {
         result.textContent = "It's a tie!";
